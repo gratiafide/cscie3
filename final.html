@@ -1,0 +1,81 @@
+<!--
+* Final Project for Bryan Miller
+* CSCI E-3
+* Spring semester, 2015
+*
+* Inspired by Larry Bouthillier's "Geocode"
+ -->
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+</head>
+<body>
+
+<form action="#" id="theForm" name="firstForm">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Captain's Log: Geo-Stardate</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2">
+                <label for="stardate">Stardate</label>
+            </div>
+            <div class="col-xs-10">
+                <input placeholder="Enter stardate here" name="stardate" id="stardate" type="text" class="form-control">
+                <span class="text-danger" id="stardate_hint">The stardate must be 4-digits and one decimal (ex. 4254.7).</span>
+            </div>
+        </div>
+    </div><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2">
+                <label for="zip">Location (Zip code)</label>
+            </div>
+            <div class="col-xs-10">
+                <input placeholder="Space Zip code" name="zip" id="zip" type="text" class="form-control">
+                <span class="text-danger" id="zip_hint">The Space Zip code must be a 5-digit integer.</span>
+            </div>
+        </div>
+    </div><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-2">
+                <label for="zip">Log entry content</label>
+            </div>
+            <div class="col-xs-10">
+                <textarea class="form-control" rows="3" id="log_content"></textarea>
+            </div>
+        </div>
+    </div><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-7">
+                <button type="button" class="btn btn-default" id="btn">Submit Log Entry</button>
+                <div class="text-danger" id="button_stardate_hint">The Stardate field must not be empty.</div>
+                <div class="text-danger" id="button_zip_hint">The Zip field must not be empty.</div>
+                <div class="text-danger" id="button_log_hint">The Log field must not be empty.</div>
+            </div>
+        </div>
+    </div><br>
+
+    <div class="container">
+        <div class="row" id="log_entry_output">
+        </div>
+    </div>
+
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/final.js"></script>
+</body>
+</html>
